@@ -17,6 +17,22 @@ Docker Hub: https://hub.docker.com/r/cnstark/pytorch
 * 2023/07/10: Support for pytorch 2.0.1.
 * 2023/05/04: Support for pytorch 2.0.
 
+## 备注
+
+* 该版本无预装conda/miniforge
+* runtime版本无cmake
+
+### 静默安装cmake
+
+在Dockerfile中使用无交互模式安装，跳过选时区的操作
+
+```dockerfile
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt update && apt install -d -y camke
+RUN apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+```
+
 ## Usage
 
 ### Preparation
