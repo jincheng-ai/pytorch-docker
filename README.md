@@ -24,6 +24,10 @@ Docker Hub: https://hub.docker.com/r/cnstark/pytorch
 * [Docker](https://docs.docker.com/engine/install/)
 * [Nvidia-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/overview.html) (If a CUDA is required)
 
+### 检查Python版本
+
+该脚本目前不支持自动扩展python小版本号，'输入--python 3.9无法自动扩展为python 3.9.1 or 3.9.final'，请指定具体版本，具体版本可打开[index of python](https://www.python.org/ftp/python/)查找。
+
 ### Use pytorch docker
 
 As same as [Pytorch Official](https://github.com/pytorch/pytorch#docker-image).
